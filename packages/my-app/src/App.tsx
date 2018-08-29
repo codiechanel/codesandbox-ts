@@ -5,6 +5,12 @@ import logo from './logo.svg';
 
 class App extends React.Component {
   public render() {
+      fetch('/.netlify/functions/hello').then(r => {
+          // console.log('resp' , r)
+          return r.json()
+      } ).then(res=>{
+          console.log('resp', res)
+      })
     return (
       <div className="App">
         <header className="App-header">

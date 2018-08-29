@@ -20,5 +20,11 @@
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.7",
     "typescript": "^3.0.1"
+  },
+  "proxy": {
+    "/.netlify": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {"^/.netlify/functions" : ""}
+    }
   }
 }
